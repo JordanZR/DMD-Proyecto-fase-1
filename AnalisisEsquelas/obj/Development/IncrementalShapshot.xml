@@ -1,0 +1,89 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>AnalisisEsquelas</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>omBG56utEmnx2e1GBFzpSl0xoUQ=17/04/2022 12:37:38 p. m.16/04/2022 01:45:17 p. m.</TimeStamp>
+        <ID>
+          <String>Esquelas DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>HSAa1s/6XRr3TQ8TGUWbvlwC5CI=16/04/2022 01:45:59 p. m.16/04/2022 01:45:59 p. m.</TimeStamp>
+        <ID>
+          <String>Esquelas DB</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yfsrzgWGOX/di6VPNtIF5YDoRZk=16/04/2022 01:46:18 p. m.16/04/2022 01:46:18 p. m.</TimeStamp>
+        <ID>
+          <String>Dim Falta</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AsMwzH/2BXxJGyNvfExNlKZCIf8=16/04/2022 01:46:18 p. m.16/04/2022 01:46:18 p. m.</TimeStamp>
+        <ID>
+          <String>Dim Departamento</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>G/VjzyToQqzxMqwgHIu86xqrC8c=16/04/2022 01:46:18 p. m.16/04/2022 01:46:18 p. m.</TimeStamp>
+        <ID>
+          <String>Dim Estado</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3pMmCfXSCWtcBzfvZD4Kuja6oDw=16/04/2022 01:46:18 p. m.16/04/2022 01:46:18 p. m.</TimeStamp>
+        <ID>
+          <String>Dim Valor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ErPFsqfcgKcKujiRWbO/QI+VbhU=16/04/2022 01:46:18 p. m.16/04/2022 01:46:18 p. m.</TimeStamp>
+        <ID>
+          <String>Fact Esquelas</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>2siWFjSsBULnYQsBLpvbaO2NLp4=16/04/2022 07:26:28 p. m.16/04/2022 01:46:17 p. m.axadjhTC+1znjThr/2UTswCPejI=16/04/2022 01:46:18 p. m.16/04/2022 01:46:17 p. m.</TimeStamp>
+        <ID>
+          <String>Esquelas DB</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>W0kLNVw0SYCvEn4tb922SXafe1w=07/04/2022 11:18:11 a. m.07/04/2022 11:18:11 a. m.</TimeStamp>
+      <ID>
+        <String>AnalisisEsquelas</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-04-18T15:14:40.963333Z</LastDeployed>
+</DeploymentSnapshot>

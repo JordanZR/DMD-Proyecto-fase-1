@@ -1,0 +1,2096 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/7/2022 9:12:55 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="HAISE"
+  DTS:CreatorName="HAISE\Haise"
+  DTS:DTSID="{4DCBEB78-9633-4034-A265-2FF65B32AA6D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="106"
+  DTS:VersionGUID="{90DA2792-77A4-4484-9B35-7D81DE71CB3B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Esquelas csv]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{87A98560-CF2E-4ABB-8773-9E015558B443}"
+      DTS:ObjectName="Esquelas csv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Haise\Downloads\Esquelas.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Nro_Esquela"
+              DTS:DTSID="{5824B914-4AA6-4C4C-B316-008D893DBAF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Fecha"
+              DTS:DTSID="{4CD3A7B2-69F2-4082-8299-DF60D79A63AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Tipo_Falta"
+              DTS:DTSID="{F84A6E66-4395-46FD-ABAA-B7FF075D6E77}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Falta_Descripcion"
+              DTS:DTSID="{E542AD1F-A962-42D0-8A14-7FC0C6C756DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Departamento"
+              DTS:DTSID="{2C0860EE-A77D-45AF-8038-6484FEDA9826}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Estado"
+              DTS:DTSID="{E242E304-2E8B-4C18-A72E-7E74847C85B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Estado_Descripcion"
+              DTS:DTSID="{0455A12D-760A-486F-BB26-3F9024B951CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Valor"
+              DTS:DTSID="{CE722696-14E8-4C66-93DB-28085D129F21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ves_Interes"
+              DTS:DTSID="{6DFE8277-3876-4A3A-866C-CFACCC0FA970}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.EsquelasDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{030CC837-5359-47C3-A28E-05AA40B80A93}"
+      DTS:ObjectName="localhost.EsquelasDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=EsquelasDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost.ParqueVehicularDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7E8110D2-36BB-477F-99E7-9C3838229908}"
+      DTS:ObjectName="localhost.ParqueVehicularDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=ParqueVehicularDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Parque vehicular]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DAE2C541-4E6F-41CC-88A2-2A9A7928DEE8}"
+      DTS:ObjectName="Parque vehicular">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Haise\Downloads\parque_vehicular_datos.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIPO_PLACA"
+              DTS:DTSID="{335301D7-039E-44CE-8082-DE8B13EFAD44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANIO_DE_FABRICACION"
+              DTS:DTSID="{C4E8F3FD-CB50-4656-BECD-3DCBB07BCC39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CILINDRADA"
+              DTS:DTSID="{EC12683C-924E-456D-AF80-427BA8D2EBBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CANTIDAD_DE_CILINDROS"
+              DTS:DTSID="{42D44589-E9DA-43C9-83FF-7BBE49B5463C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CANTIDAD_DE_PUERTAS"
+              DTS:DTSID="{D432EB1D-C63B-46EA-96CE-4A4A875C3C63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VALOR_DEL_VEHICULO"
+              DTS:DTSID="{EEB34285-1A87-425A-972C-BD6BF84AA046}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COLORES"
+              DTS:DTSID="{8642655F-577D-4330-8D6D-19237EBC128D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FECHA_DE_IMPORTACION"
+              DTS:DTSID="{E554C6AC-57B1-40D4-8DF1-47F48845AA10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMP_VALOR_DEL_VEHICULO"
+              DTS:DTSID="{EA52DA73-5004-4342-B57B-71953F6F07D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FECHA_DE_INGRESO"
+              DTS:DTSID="{BDFC4A4B-86E6-438D-84A9-47FFA91F17F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ANIO_INGRESO"
+              DTS:DTSID="{C9B78178-4D8A-4127-875F-AFF701816D6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MES_INGRESO"
+              DTS:DTSID="{407103B1-013D-4078-AE5A-AC1455D48525}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CLASE"
+              DTS:DTSID="{AFF21C92-74A6-4C98-93EC-2847E80DDFA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PERTENENCIA"
+              DTS:DTSID="{E413D80E-FE2F-4C64-A783-E7B9041DA5A3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MARCA"
+              DTS:DTSID="{24199784-09EC-4644-B478-FC06CF30ED66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MODELO"
+              DTS:DTSID="{4252C090-A734-4DE9-8C21-FA30DF95178E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CAPACIDAD"
+              DTS:DTSID="{1D12F0CB-572D-4D3D-99AA-709EACE6409C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DES_CAPACIDAD"
+              DTS:DTSID="{1237B27F-0383-4F38-A8E9-0D491A482CBB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COMBUSTIBLE"
+              DTS:DTSID="{4DC52F37-6F0A-4CD6-9C3B-78FE9D6659EC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ADUANA"
+              DTS:DTSID="{681F626C-4F4C-41DE-A4C7-57972BFD27EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CONDICION_INGRESO"
+              DTS:DTSID="{F43034EA-7771-42CC-A0B1-443C0FF98E3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROPIETARIO_DEPARTAMENTO"
+              DTS:DTSID="{980C90FA-3E97-4951-9598-C0502B07ADCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PROPIETARIO_MUNICIPIO"
+              DTS:DTSID="{8ADADA43-2734-4FD4-B216-E77D9DBE32D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ESTADO"
+              DTS:DTSID="{A8FDD1B2-CEF3-4453-A2E9-E9AD33C06EC4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A5BB2BDD-5486-4E69-B8BA-CF1036FBF5BA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Esquelas csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2058"
+              name="Esquelas csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Esquelas csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Esquelas csv]"
+                  connectionManagerRefId="Package.ConnectionManagers[Esquelas csv]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Nro_Esquela]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Nro_Esquela]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Nro_Esquela]"
+                      name="Ves_Nro_Esquela"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Fecha]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Fecha]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Fecha]"
+                      name="Ves_Fecha"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Tipo_Falta]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Tipo_Falta]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Tipo_Falta]"
+                      name="Ves_Tipo_Falta"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Falta_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Falta_Descripcion]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Falta_Descripcion]"
+                      name="Ves_Falta_Descripcion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Departamento]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Departamento]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Departamento]"
+                      name="Ves_Departamento"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Estado]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado]"
+                      name="Ves_Estado"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Estado_Descripcion]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado_Descripcion]"
+                      name="Ves_Estado_Descripcion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Valor]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Valor]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Valor]"
+                      name="Ves_Valor"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Interes]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Interes]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Interes]"
+                      name="Ves_Interes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Nro_Esquela]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Nro_Esquela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Fecha]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Tipo_Falta]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Tipo_Falta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Falta_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Falta_Descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Departamento]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Estado]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Estado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Estado_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Estado_Descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Valor]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].ExternalColumns[Ves_Interes]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Ves_Interes" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Esquelas tabla normalizada"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Esquelas tabla normalizada"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Esquelas_Normalizada]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Esquelas tabla normalizada.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.EsquelasDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.EsquelasDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Nro_Esquela]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Nro_Esquela"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Nro_Esquela]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Nro_Esquela]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Fecha]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Fecha"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Fecha]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Fecha]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Tipo_Falta]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Tipo_Falta"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_Falta]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Tipo_Falta]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Falta_Descripcion]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Falta_Descripcion"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Falta_Descripcion]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Falta_Descripcion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Departamento]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Departamento"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Departamento]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Departamento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Estado]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Estado"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Estado]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Estado_Descripcion]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Estado_Descripcion"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Estado_Descripcion]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Estado_Descripcion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Valor]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Valor"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Valor]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Valor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].Columns[Ves_Interes]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Ves_Interes"
+                      externalMetadataColumnId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Interes]"
+                      lineageId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output].Columns[Ves_Interes]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Nro_Esquela]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Nro_Esquela" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Fecha]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Fecha" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Tipo_Falta]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Tipo_Falta" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Falta_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Falta_Descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Departamento]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Estado]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Estado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Estado_Descripcion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Estado_Descripcion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Valor]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Valor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[Interes]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Interes" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Esquelas tabla normalizada.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Esquelas tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Esquelas tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Esquelas tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Parque csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="2058"
+              name="Parque csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Parque csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Parque vehicular]"
+                  connectionManagerRefId="Package.ConnectionManagers[Parque vehicular]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[TIPO_PLACA]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[TIPO_PLACA]"
+                      name="TIPO_PLACA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ANIO_DE_FABRICACION]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]"
+                      name="ANIO_DE_FABRICACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CILINDRADA]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CILINDRADA]"
+                      name="CILINDRADA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_CILINDROS]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]"
+                      name="CANTIDAD_DE_CILINDROS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_PUERTAS]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]"
+                      name="CANTIDAD_DE_PUERTAS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]"
+                      name="VALOR_DEL_VEHICULO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COLORES]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[COLORES]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COLORES]"
+                      name="COLORES"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_IMPORTACION]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]"
+                      name="FECHA_DE_IMPORTACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[IMP_VALOR_DEL_VEHICULO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      name="IMP_VALOR_DEL_VEHICULO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_INGRESO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]"
+                      name="FECHA_DE_INGRESO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ANIO_INGRESO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]"
+                      name="ANIO_INGRESO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MES_INGRESO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MES_INGRESO]"
+                      name="MES_INGRESO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CLASE]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CLASE]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CLASE]"
+                      name="CLASE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PERTENENCIA]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PERTENENCIA]"
+                      name="PERTENENCIA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MARCA]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MARCA]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MARCA]"
+                      name="MARCA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MODELO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MODELO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MODELO]"
+                      name="MODELO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CAPACIDAD]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CAPACIDAD]"
+                      name="CAPACIDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[DES_CAPACIDAD]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]"
+                      name="DES_CAPACIDAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[COMBUSTIBLE]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]"
+                      name="COMBUSTIBLE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ADUANA]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ADUANA]"
+                      name="ADUANA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CONDICION_INGRESO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]"
+                      name="CONDICION_INGRESO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_DEPARTAMENTO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      name="PROPIETARIO_DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_MUNICIPIO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]"
+                      name="PROPIETARIO_MUNICIPIO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ESTADO]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ESTADO]"
+                      name="ESTADO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[TIPO_PLACA]"
+                      codePage="1252"
+                      dataType="text"
+                      name="TIPO_PLACA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ANIO_DE_FABRICACION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ANIO_DE_FABRICACION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CILINDRADA]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CILINDRADA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_CILINDROS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CANTIDAD_DE_CILINDROS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CANTIDAD_DE_PUERTAS]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CANTIDAD_DE_PUERTAS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[VALOR_DEL_VEHICULO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="VALOR_DEL_VEHICULO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[COLORES]"
+                      codePage="1252"
+                      dataType="text"
+                      name="COLORES" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_IMPORTACION]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FECHA_DE_IMPORTACION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[IMP_VALOR_DEL_VEHICULO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="IMP_VALOR_DEL_VEHICULO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[FECHA_DE_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="FECHA_DE_INGRESO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ANIO_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ANIO_INGRESO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MES_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="MES_INGRESO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CLASE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CLASE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PERTENENCIA]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PERTENENCIA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MARCA]"
+                      codePage="1252"
+                      dataType="text"
+                      name="MARCA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[MODELO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="MODELO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CAPACIDAD]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CAPACIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[DES_CAPACIDAD]"
+                      codePage="1252"
+                      dataType="text"
+                      name="DES_CAPACIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[COMBUSTIBLE]"
+                      codePage="1252"
+                      dataType="text"
+                      name="COMBUSTIBLE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ADUANA]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ADUANA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[CONDICION_INGRESO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="CONDICION_INGRESO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_DEPARTAMENTO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PROPIETARIO_DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[PROPIETARIO_MUNICIPIO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PROPIETARIO_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].ExternalColumns[ESTADO]"
+                      codePage="1252"
+                      dataType="text"
+                      name="ESTADO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Parque tabla normalizada"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Parque tabla normalizada"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ParqueVehicular_Normalizada]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Parque tabla normalizada.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost.ParqueVehicularDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost.ParqueVehicularDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[TIPO_PLACA]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="TIPO_PLACA"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[tipo_placa]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[TIPO_PLACA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[ANIO_DE_FABRICACION]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="ANIO_DE_FABRICACION"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[anio_de_fabricacion]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_DE_FABRICACION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CILINDRADA]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CILINDRADA"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cilindrada]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CILINDRADA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CANTIDAD_DE_CILINDROS]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CANTIDAD_DE_CILINDROS"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cantidad_de_cilindros]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_CILINDROS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CANTIDAD_DE_PUERTAS]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CANTIDAD_DE_PUERTAS"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cantidad_de_puertas]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CANTIDAD_DE_PUERTAS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[VALOR_DEL_VEHICULO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="VALOR_DEL_VEHICULO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[valor_del_vehiculo]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[VALOR_DEL_VEHICULO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[COLORES]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="COLORES"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[colores]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COLORES]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[FECHA_DE_IMPORTACION]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="FECHA_DE_IMPORTACION"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[fecha_de_importacion]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_IMPORTACION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[IMP_VALOR_DEL_VEHICULO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="IMP_VALOR_DEL_VEHICULO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[imp_valor_del_vehiculo]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[IMP_VALOR_DEL_VEHICULO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[FECHA_DE_INGRESO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="FECHA_DE_INGRESO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[fecha_de_ingreso]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[FECHA_DE_INGRESO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[ANIO_INGRESO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="ANIO_INGRESO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[anio_ingreso]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ANIO_INGRESO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[MES_INGRESO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="MES_INGRESO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[mes_ingreso]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MES_INGRESO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CLASE]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CLASE"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[clase]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CLASE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[PERTENENCIA]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="PERTENENCIA"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[pertenencia]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PERTENENCIA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[MARCA]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="MARCA"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[marca]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MARCA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[MODELO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="MODELO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[MODELO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CAPACIDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CAPACIDAD"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[capacidad]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CAPACIDAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[DES_CAPACIDAD]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="DES_CAPACIDAD"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[des_capacidad]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[DES_CAPACIDAD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[COMBUSTIBLE]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="COMBUSTIBLE"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[combustible]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[COMBUSTIBLE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[ADUANA]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="ADUANA"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[aduana]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ADUANA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[CONDICION_INGRESO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="CONDICION_INGRESO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[condicion_ingreso]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[CONDICION_INGRESO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[PROPIETARIO_DEPARTAMENTO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="PROPIETARIO_DEPARTAMENTO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[propietario_departamento]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[PROPIETARIO_MUNICIPIO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="PROPIETARIO_MUNICIPIO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[propietario_municipio]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[PROPIETARIO_MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].Columns[ESTADO]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="ESTADO"
+                      externalMetadataColumnId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
+                      lineageId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output].Columns[ESTADO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[tipo_placa]"
+                      codePage="1252"
+                      dataType="text"
+                      name="tipo_placa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[anio_de_fabricacion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="anio_de_fabricacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cilindrada]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cilindrada" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cantidad_de_cilindros]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cantidad_de_cilindros" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[cantidad_de_puertas]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cantidad_de_puertas" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[valor_del_vehiculo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="valor_del_vehiculo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[colores]"
+                      codePage="1252"
+                      dataType="text"
+                      name="colores" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[fecha_de_importacion]"
+                      codePage="1252"
+                      dataType="text"
+                      name="fecha_de_importacion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[imp_valor_del_vehiculo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="imp_valor_del_vehiculo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[fecha_de_ingreso]"
+                      codePage="1252"
+                      dataType="text"
+                      name="fecha_de_ingreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[anio_ingreso]"
+                      codePage="1252"
+                      dataType="text"
+                      name="anio_ingreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[mes_ingreso]"
+                      codePage="1252"
+                      dataType="text"
+                      name="mes_ingreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[clase]"
+                      codePage="1252"
+                      dataType="text"
+                      name="clase" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[pertenencia]"
+                      codePage="1252"
+                      dataType="text"
+                      name="pertenencia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[marca]"
+                      codePage="1252"
+                      dataType="text"
+                      name="marca" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[modelo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="modelo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[capacidad]"
+                      codePage="1252"
+                      dataType="text"
+                      name="capacidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[des_capacidad]"
+                      codePage="1252"
+                      dataType="text"
+                      name="des_capacidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[combustible]"
+                      codePage="1252"
+                      dataType="text"
+                      name="combustible" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[aduana]"
+                      codePage="1252"
+                      dataType="text"
+                      name="aduana" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[condicion_ingreso]"
+                      codePage="1252"
+                      dataType="text"
+                      name="condicion_ingreso" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[propietario_departamento]"
+                      codePage="1252"
+                      dataType="text"
+                      name="propietario_departamento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[propietario_municipio]"
+                      codePage="1252"
+                      dataType="text"
+                      name="propietario_municipio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input].ExternalColumns[estado]"
+                      codePage="1252"
+                      dataType="text"
+                      name="estado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Parque tabla normalizada.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Parque tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Parque tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Parque tabla normalizada.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Esquelas tabla normalizada.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Esquelas csv.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\Parque tabla normalizada.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Parque csv.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task\Esquelas tabla normalizada"
+          TopLeft="183,258" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task\Esquelas csv"
+          TopLeft="199,87" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="271.5,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,129"
+              Start="0,0"
+              End="0,121.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,121.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Parque csv"
+          TopLeft="448,91" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Data Flow Task\Parque tabla normalizada"
+          TopLeft="425,258" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="513,133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,125"
+              Start="0,0"
+              End="11,117.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,58.5"
+                    Point2="0,62.5"
+                    Point3="4,62.5" />
+                  <mssgle:LineSegment
+                    End="7,62.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,62.5"
+                    Point2="11,62.5"
+                    Point3="11,66.5" />
+                  <mssgle:LineSegment
+                    End="11,117.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Esquelas tabla normalizada">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Parque tabla normalizada">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

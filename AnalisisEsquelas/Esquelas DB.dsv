@@ -1,0 +1,193 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="38f061ff-fb63-4394-bdd1-61cd1c0aa7c9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Esquelas DB</ID>
+  <Name>Esquelas DB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Esquelas DB</DataSourceID>
+  <Schema>
+    <xs:schema id="Esquelas_x0020_DB" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Esquelas_x0020_DB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="339de8cc-b647-4b5e-aae8-3fd9ae7fae43">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Dim_Departamento" msprop:design-time-name="a1b68c91-9550-4516-b308-0442640d4150" msprop:DbTableName="Dim_Departamento" msprop:FriendlyName="Dim_Departamento" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_departamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="13dc6a50-9d05-4db7-8b8c-1ee45e998b9e" msprop:DbColumnName="id_departamento" msprop:FriendlyName="id_departamento" type="xs:int" />
+                  <xs:element name="departamento" msprop:design-time-name="0a468092-51fc-4b9b-8c47-65f292b1d569" msprop:DbColumnName="departamento" msprop:FriendlyName="departamento" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Estado" msprop:design-time-name="58b4bc95-cb1d-4a83-ae18-6dde66fffe53" msprop:DbTableName="Dim_Estado" msprop:FriendlyName="Dim_Estado" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="estado" msprop:design-time-name="46fd69a8-bb9b-4760-8e18-844a813e3881" msprop:DbColumnName="estado" msprop:FriendlyName="estado">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="estado_descripcion" msprop:design-time-name="4612a6a6-de92-4b6b-8267-8f51b50029b6" msprop:DbColumnName="estado_descripcion" msprop:FriendlyName="estado_descripcion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Falta" msprop:design-time-name="cb3beabb-3afa-493e-9616-1cee7495998c" msprop:DbTableName="Dim_Falta" msprop:FriendlyName="Dim_Falta" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_falta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="44941eed-73b6-4e4d-b8a4-2e06f055d7ca" msprop:DbColumnName="id_falta" msprop:FriendlyName="id_falta" type="xs:int" />
+                  <xs:element name="tipo_falta" msprop:design-time-name="c14ea0a4-d595-4e8b-8aee-baf9495ad97b" msprop:DbColumnName="tipo_falta" msprop:FriendlyName="tipo_falta" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Dim_Valor" msprop:design-time-name="d23a2da7-d44e-46e4-aeaa-380eb20f5f38" msprop:DbTableName="Dim_Valor" msprop:FriendlyName="Dim_Valor" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_valor" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="34002c0b-6a3a-44b1-851f-ed15709fc141" msprop:DbColumnName="id_valor" msprop:FriendlyName="id_valor" type="xs:int" />
+                  <xs:element name="valor" msprop:design-time-name="84384408-e75a-4958-8852-47b590d38e47" msprop:DbColumnName="valor" msprop:FriendlyName="valor" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Fact_Esquelas" msprop:design-time-name="e2c0e040-dc24-4841-b891-88c7ecdd42d8" msprop:DbTableName="Fact_Esquelas" msprop:FriendlyName="Fact_Esquelas" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="3229cfdb-2e98-4d10-a817-8ba1ff4b1012" msprop:DbColumnName="id" msprop:FriendlyName="id" type="xs:int" />
+                  <xs:element name="nro_esquela" msprop:design-time-name="20f19d08-5d9f-4b82-9f79-ec94bd409357" msprop:DbColumnName="nro_esquela" msprop:FriendlyName="nro_esquela" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="fecha" msprop:design-time-name="96c5c18c-f55b-4d52-9846-69cc8562272d" msprop:DbColumnName="fecha" msprop:FriendlyName="fecha" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="interes" msprop:design-time-name="25e64d62-e681-4247-8e09-fe0c179cb2a6" msprop:DbColumnName="interes" msprop:FriendlyName="interes" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2147483647" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="falta_descripcion" msprop:design-time-name="411fb2d6-b858-4787-b294-f05fbe1a492f" msprop:DbColumnName="falta_descripcion" msprop:FriendlyName="falta_descripcion" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="400" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_falta" msprop:design-time-name="acde0aa7-aa75-40a9-bcb1-7020125dc13a" msprop:DbColumnName="id_falta" msprop:FriendlyName="id_falta" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_departamento" msprop:design-time-name="5f5c44ef-00dc-4c0c-8b70-f45f02f8ace3" msprop:DbColumnName="id_departamento" msprop:FriendlyName="id_departamento" type="xs:int" minOccurs="0" />
+                  <xs:element name="estado" msprop:design-time-name="7e1f45a5-c6f1-49c6-963f-245a8a9bf42e" msprop:DbColumnName="estado" msprop:FriendlyName="estado" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_valor" msprop:design-time-name="f441e375-0c9d-459c-a284-0d743d721d2a" msprop:DbColumnName="id_valor" msprop:FriendlyName="id_valor" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Departamento" />
+          <xs:field xpath="id_departamento" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Estado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Estado" />
+          <xs:field xpath="estado" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Falta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Falta" />
+          <xs:field xpath="id_falta" />
+        </xs:unique>
+        <xs:unique name="dbo_Dim_Valor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Dim_Valor" />
+          <xs:field xpath="id_valor" />
+        </xs:unique>
+        <xs:unique name="dbo_Fact_Esquelas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Fact_Esquelas" />
+          <xs:field xpath="id" />
+        </xs:unique>
+      </xs:element>
+      <xs:annotation>
+        <xs:appinfo>
+          <msdata:Relationship name="Fact_Esquelas-Dim_Falta" msdata:parent="dbo_Dim_Falta" msdata:child="dbo_Fact_Esquelas" msdata:parentkey="id_falta" msdata:childkey="id_falta" />
+          <msdata:Relationship name="Fact_Esquelas-Dim_Departamento" msdata:parent="dbo_Dim_Departamento" msdata:child="dbo_Fact_Esquelas" msdata:parentkey="id_departamento" msdata:childkey="id_departamento" />
+          <msdata:Relationship name="Fact_Esquelas-Dim_Estado" msdata:parent="dbo_Dim_Estado" msdata:child="dbo_Fact_Esquelas" msdata:parentkey="estado" msdata:childkey="estado" />
+          <msdata:Relationship name="Fact_Esquelas-Dim_Valor" msdata:parent="dbo_Dim_Valor" msdata:child="dbo_Fact_Esquelas" msdata:parentkey="id_valor" msdata:childkey="id_valor" />
+        </xs:appinfo>
+      </xs:annotation>
+    </xs:schema>
+    <Esquelas_x0020_DB xmlns="" />
+  </Schema>
+</DataSourceView>
